@@ -1,21 +1,15 @@
+import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class SenderThread implements Runnable{
     private Scanner scanner;
-    private PrintWriter printWriter;
+    private PrintWriter output;
+    private BufferedReader input;
 
-    public SenderThread(Scanner scanner, Client client) {
-        this.scanner = scanner;
-    }
 
     @Override
     public void run() {
-
-        do{
-            Message message = this.client.createMessage(scanner);
-            System.out.println(message);
-        }while(message!=null);
 
     }
 }

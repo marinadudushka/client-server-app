@@ -1,13 +1,19 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Scanner;
 
 public class Server{
     private String serverName;
     private ServerSocket serverSocket;
     private Socket clientSocket;
+    private BufferedReader bufferedReader;//for input
+    private PrintWriter printWriter;
+    private Scanner scanner = new Scanner(System.in);
 
     public Server(String name,int port) {
         this.serverName = name;
@@ -20,6 +26,7 @@ public class Server{
         }
 
     }
+
 
     void receiveMessage(Message message){
 
